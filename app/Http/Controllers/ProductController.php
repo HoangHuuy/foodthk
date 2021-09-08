@@ -64,10 +64,10 @@ class ProductController extends Controller
 
             $product->save();
 
-            return redirect()->route('seller.addProduct')->with('success', 'them thanh cong');
+            return redirect()->route('seller.addProduct')->with('success', 'Thêm thành công');
         }catch(Exception $error){
             dd($error);
-            return redirect()->route('seller.addProduct')->with('error', 'loi');
+            return redirect()->route('seller.addProduct')->with('error', 'Có lỗi trong quá trình thực hiện');
         }
 
     }

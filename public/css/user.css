@@ -1,5 +1,5 @@
 body {
-    background-color: #f5f5f5 !important;
+    background-color: #d6d6d6 !important;
 }
 
 .title {
@@ -100,4 +100,8 @@ a:link{
 
 .mb-3 .form-select {
     width: 80%;
+}
+
+.add-success {
+    color: green;
 }

@@ -2,9 +2,9 @@
 
 @section('content')
 <div id="seller-wrapper">
-    <div id="seller-sidebar">
+    <nav id="seller-sidebar"  class="navbar nav-special navbar-expand d-flex flex-column align-item-start">
         @include('..layouts.ssb')
-    </div>
+    </nav>
     <div id="seller-main-content">
         <div id="seller-main-content-wrapper">
             <div class="seller-title">
@@ -48,11 +48,11 @@
                 </div>
 
                 @if(session()->has('success'))
-                <div class="alert alert-success">
+                <div class="alert add-success">
                     {{ session()->get('success') }}
                 </div>
                 @elseif(session()->has('error'))
-                <div class="alert alert-danger">
+                <div class="alert add-danger">
                     {{ session()->get('error') }}
                 </div>
                 @endif
