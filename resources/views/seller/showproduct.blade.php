@@ -32,10 +32,10 @@
                         <td>{{ $item->type }}</td>
                         <td>{{ $item->price }}</td>
                         <td>
-                            <button class="btn btn-primary"><a href="{{ route('seller.editProduct', ['id' => $item->id]) }}" class="link-btn">Sửa</a></button>
+                            <button class="btn btn-primary"><a href="{{ route('seller.editProduct', ['id' => $item->id]) }}" class="link-btn link-btn-action">Sửa</a></button>
                         </td>
                         <td>
-                            <button class="btn btn-danger"><a href="{{ route('seller.deleteProduct', ['id' => $item->id])}}" class="link-btn">Xóa</a></button>
+                            <button class="btn btn-danger"><a href="{{ route('seller.deleteProduct', ['id' => $item->id])}}" class="link-btn link-btn-action">Xóa</a></button>
                         </td>
                     </tr>
                     @endforeach

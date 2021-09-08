@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="seller-wrapper">
-    <nav id="seller-sidebar"  class="navbar nav-special navbar-expand d-flex flex-column align-item-start">
+    <nav id="seller-sidebar" class="navbar nav-special navbar-expand d-flex flex-column align-item-start">
         @include('..layouts.ssb')
     </nav>
     <div id="seller-main-content">
