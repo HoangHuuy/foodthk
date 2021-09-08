@@ -49,22 +49,22 @@
                         <div class="card-header">Thông tin tài khoản</div>
 
                         <div class="card-body">
-                            <form method="POST" action="http://127.0.0.1:8000/login">
-                                <input type="hidden" name="_token" value="YXQT0cLeyba44MN3CltR9urN6BZw4mCoYalOcGow">
+                            <form method="POST" action="{{route('seller.storeAccount')}}">
+                                @csrf
                                 <div class="form-group row">
                                     <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
 
                                     <div class="col-md-6">
-                                        <input id="username" readonly type="text" class="form-control " value = '{{Auth::user()-> username}}'name="username" value="" required autocomplete="username" autofocus>
+                                        <input id="username" readonly type="text" class="form-control " value = '{{Auth::user()-> username}}'name="username" >
 
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="password" class="col-md-4 col-form-label text-md-right">Tên shop</label>
+                                    <label for="password" class="col-md-4 col-form-label text-md-right">Ho và tên</label>
 
                                     <div class="col-md-6">
-                                        <input id="shopname" type="text" class="form-control " name="shopname" >
+                                        <input id="shopname" type="text" class="form-control " name="fullname" >
 
                                     </div>
                                 </div>
@@ -72,24 +72,37 @@
                                     <label for="password" class="col-md-4 col-form-label text-md-right">Ngày Sinh</label>
 
                                     <div class="col-md-6">
-                                        <input id="dtUser" type="date" class="form-control " name="shopname" >
+                                        <input id="dtUser" type="date" class="form-control " name="doB" >
 
                                     </div>
+
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-md-4 col-form-label text-md-right">Giới tính</label>
 
                                     <div class="col-md-6">
-                                        <input id="rdGioitinh" type="checkbox" value = "Nam"  name="rdGT" >Nam
-                                        <input id="rdGioitinh" type="radio"  value = "Nữ" name="rdGT" >Nữ
-                                        <input id="rdGioitinh" type="radio"  value = "Khác" name="rdGT" >Khác
+                                        <input id="rdGioitinh" type="radio" value = "Nam"  name="gender" >Nam
+                                        <input id="rdGioitinh" type="radio"  value = "Nữ" name="gender" >Nữ
+                                        <input id="rdGioitinh" type="radio"  value = "Khác" name="gender" >Khác
                                     </div>
                                 </div>
+                                <div class="form-group row">
+                                    <label for="username" class="col-md-4 col-form-label text-md-right">Email</label>
 
+                                    <div class="col-md-6">
+                                        <input id="txtEmails" type="text" class="form-control " name="emails" >
 
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="sđt" class="col-md-4 col-form-label text-md-right">SĐT</label>
 
+                                    <div class="col-md-6">
+                                        <input id="txtSĐT" type="text" class="form-control" name="sđt" >
 
-
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </form>
                         </div>
                     </div>

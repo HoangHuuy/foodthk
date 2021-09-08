@@ -21,9 +21,9 @@
                     <input type="text" class="form-control" id="exampleInputPassword1" name="title">
                 </div>
 
-                <!-- @error('title')
+                 @error('title')
                     <p style="color: red">{{ $message }}</p>
-                @enderror -->
+                @enderror
 
                 <div class="mb-3">
                     <label class="form-check-label" for="exampleCheck1" for="type">Loại sản phẩm</label>
@@ -32,19 +32,19 @@
                         <option value="congee">Cháo</option>
                         <option value="noodles">Phở</option>
                         <option value="snack">Đồ ăn vặt</option>
-                        <option value="drink">Đồ ăn khác</option>
+                        <option value="others">Đồ ăn khác</option>
                         <option value="drink">Đồ uống</option>
                     </select>
                 </div>
 
                 <div class="mb-3">
                     <label for="title" class="form-label">Giá</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="price">
+                    <input type="text" class="form-control" id="price" name="price">
                 </div>
 
                 <div class="mb-3">
                     <label for="title" class="form-label">Hình ảnh</label>
-                    <input type="file" class="form-control" id="exampleInputPassword1" name="image_product">
+                    <input type="file" class="form-control" id="image_product" name="image_product">
                 </div>
 
                 @if(session()->has('success'))
