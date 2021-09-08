@@ -2,9 +2,9 @@
 
 @section('content')
 <div id="seller-wrapper">
-    <div id="seller-sidebar">
+    <nav id="seller-sidebar"  class="nav-special navbar navbar-expand d-flex flex-column align-item-start">
         @include('..layouts.ssb')
-    </div>
+    </nav>
     <div id="seller-main-content">
         <form class="container" action="{{ route('seller.updateProduct', ['id' => $product[0]->id]) }}" method="post" enctype="multipart/form-data">
             @csrf

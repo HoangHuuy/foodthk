@@ -4,15 +4,6 @@
     <div class="container">
         <div class="flex-center position-ref full-height">
             <div class="content">
-                @if (Route::has('login'))
-                    @auth
-                        <a href="/seller">Trang người bán</a>
-
-                    @else
-                        <a href="{{ route('login') }}">Trang người bán</a>
-                    @endauth
-                @endif
-
                 <div class="title m-b-md text-center">
                     <h1>foodTHK</h1>
                 </div>
