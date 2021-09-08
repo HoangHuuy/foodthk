@@ -64,10 +64,10 @@ class ProductController extends Controller
 
             $product->save();
 
-            return redirect()->route('seller.addProduct')->with('success', 'them thanh cong');
+            return redirect()->route('seller.addProduct')->with('success', 'Thêm thành công');
         }catch(Exception $error){
             dd($error);
-            return redirect()->route('seller.addProduct')->with('error', 'loi');
+            return redirect()->route('seller.addProduct')->with('error', 'Có lỗi trong quá trình thực hiện');
         }
 
     }
@@ -127,10 +127,10 @@ class ProductController extends Controller
             'title' => $product->title, 'type' => $product->type, 
             'price' => $product->price, 'image_product' => $product->image_product ]);
             // dd("success");
-            return redirect()->route('seller.showProduct')->with('success', 'update thanh cong');
+            return redirect()->route('seller.showProduct')->with('success', 'Thay đổi thành công');
         }catch(Exception $error){
             dd($error);
-            return redirect()->route('seller.updateProduct')->with('error', 'loi');
+            return redirect()->route('seller.updateProduct')->with('error', 'Có lỗi trong quá trình thực hiện');
         }
     }
 

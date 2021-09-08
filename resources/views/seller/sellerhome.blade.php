@@ -2,9 +2,9 @@
 
 @section('content')
     <div id="seller-wrapper">
-        <div id="seller-sidebar">
+        <nav id="seller-sidebar" class="nav-special navbar navbar-expand d-flex flex-column align-item-start">
             @include('..layouts.ssb')
-        </div>
+        </nav>
         <div id="seller-main-content">
             <h1>đây là nội dung chính</h1>
         </div>
